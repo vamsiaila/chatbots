@@ -7,7 +7,7 @@ const port = process.env.PORT || 3030;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
-router.get('/',(req,res)=> res.send('chatbot working'));
+app.get('/',(req,res)=> res.send('chatbot working'));
 app.use('/api',routes);
 
 
