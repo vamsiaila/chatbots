@@ -1,6 +1,9 @@
 
 module.exports = {
     sample : (req,res)=>{
-        res.send({speech:'something', displayText:'something', source:'testme'});
+        let response = {
+            messages: [{speech:'something', displayText:'something', source:'testme'}]
+        }
+        res.send(response);
     }
 }
