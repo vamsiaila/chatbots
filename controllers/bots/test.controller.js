@@ -1,6 +1,23 @@
 
 module.exports = {
     sample : (req,res)=>{
-        res.send({speech:'something', displayText:'something', source:'testme'});
+        
+        const payload = {
+                payload: {
+                    google: {
+                        expectUserResponse: true,
+                        richResponse: {
+                            items: [
+                                {
+                                    simpleResponse: {
+                                        ssml: 'hi i am vamsi',
+                                    }
+                                }
+                            ]
+                        },
+                    },
+                },
+            };
+        res.send(payload);
     }
 }
