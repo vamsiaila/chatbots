@@ -2,7 +2,7 @@
 module.exports = {
     sample : (req,res)=>{
         let response = {
-            messages: [{speech:'something', displayText:'something', source:'testme'}]
+            messages: [{speech:'something', type:0}]
         }
         res.send(response);
     }
