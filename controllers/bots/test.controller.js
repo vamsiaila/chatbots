@@ -1,9 +1,7 @@
 
 module.exports = {
     sample : (req,res)=>{
-        let response = {
-            messages: [{speech:'something', type:0}]
-        }
-        res.send(response);
+        req.body.queryResult.fulfillmentMessages[0].text.text[0] = "something for test";
+        res.send(req);
     }
 }
