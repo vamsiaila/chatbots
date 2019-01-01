@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const test = require('../controllers/bots/test.controller');
 
-router.use('/',(req,res)=>{
+router.post('/',(req,res)=>{
     if(req.queryResult.intent.displayName === 'testing') return test.sample;
+    else res.send('invalid intent');
 })
 
 module.exports = router;
