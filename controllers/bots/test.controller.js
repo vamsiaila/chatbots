@@ -14,7 +14,7 @@ module.exports = {
             payload.fulfillmentText= "I am free on Saturday and Sunday"
         }
         else{
-            payload.fulfillmentText= "My working hours are/n mon-fri 10:00 - 19:00"
+            payload.fulfillmentText= "My working hours are\n mon-fri 10:00 - 19:00"
         }
         res.send(payload)
     }
